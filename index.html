@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>sub</title>
+<style>
+
+
+header {width:100%; height:200px; }
+ul, ol, dl {
+margin: 0;
+padding: 0;
+}
+
+#top {width:100%; height:80px; }
+#top > img {width:100%; height:100%;}
+
+#menu {width:1560px; height:60px;  margin:0 auto;}
+#menu > .high {width:1560x; height:60px;  justify-content:space-between; display:flex; }
+#menu > .high > .logobox {width:200px; height:60px; }
+#menu > .high > .logobox > a > img {width:100%; height:100%;}
+#menu > .high > .searchbox {width:400px; height:60px;  margin:10px 0;}
+#menu > .high > .login {width:300px; height:60px; }
+input[type="search"] {width: 335px;
+height: 44px;
+display: block;
+float: left;
+border: none;
+font-size: 14px;
+line-height: 44px;
+background: none;
+padding: 0; font: inherit;
+margin: 0;
+color: inherit;}
+input[type="search"]:after{content:"";
+display: block;
+width: 360px;
+height: 1px;
+background: #000;
+position: absolute;
+bottom: 15px;
+left: 16px;}
+button[type="submit"] > img {width:20px; height:20px; margin:15px 0; }
+button[type="submit"] {background:none; border:none;}
+
+#menu > .high > .login > .util > li {font-size:10px; float:left; list-style: none; padding:10px 0;}
+#menu > .high > .login > .util > li >.icon > img {width:20px; height:20px; float:left; margin:0 20px;}
+#menu > .high > .login  >.util > li > a {margin:10px 18px;}
+
+
+
+nav {width:100%; height:60px;   justify-content:center; display:flex; }
+nav > .nav-wrap {width:1560px; height:60px;  justify-content:space-between; display:flex;}
+nav > .nav-wrap > .nav-left {width:800px; height:60px; }
+nav > .nav-wrap > .nav-right {width:800px; height:60px; }
+nav > .nav-wrap > .nav-left > ul > li { font-size:10px; float:right; margin:-35px 40px 10px 0; list-style: none;  padding:10px 0;;}
+nav > .nav-wrap > .nav-right > ul > li { font-size:10px; float:left; margin:25px 30px; list-style: none;  padding:10px 0;}
+nav > .nav-wrap > .nav-left > .button > button{width:200px; height:60px; background:none; border:none;}
+
+
+
+#slider  {width:1240px; height:900px; margin:20px auto;  justify-content:space-between; display:flex;}
+#slider >.product-img {width:525px; height:0px; }
+
+#slider >.product-img  > .img-wrap {width:525px; height:700px; }
+#slider >.product-img  > .img-wrap > img {width:100%; height:100%;}
+#slider >.product-img > .menu {width:550px; height:30px; }
+#slider >.product-img > .menu > li {float:left; display: block; font-size:12px;
+list-style-type: disc;
+margin-block-start: 1em;
+margin-block-end: 1em;
+margin-inline-start: 0px;
+margin-inline-end: 0px;
+padding-inline-start: 10px;}
+
+
+
+#slider >.product-img > .menu > li > button > img{width:100%; height:100%; }
+#slider >.product-img > .menu > li > button {display: inline-block;
+width: 10px;
+height: 10px;
+margin: 0 1px 0 5px;
+vertical-align: middle;
+background: url(//static.wconcept.co.kr/web/images/common/spr-common.png) -570px -30px no-repeat;
+
+border:3px solid #000; }
+
+
+
+
+
+#slider >.product-img > .explain {width:525px; height:150px; margin:20px 0;}
+#slider >.product-img > .explain > .img-wrap {width:140px; height:80px;   justify-content:space-between; display:flex;}
+#slider >.product-img > .explain > .img-wrap > .img {width:60px; height:80px;}
+#slider >.product-img > .explain > .img-wrap > .img > img {width:100%; height:100%;}
+#slider >.product-explain {margin:40px 0;  height:860px;}
+#slider >.product-explain >.price {width:650px; height:300px; }
+#slider >.product-explain >.price > .review > p > button {margin:0 0 0 20px;}
+#slider >.product-explain >.order {width:650px; height:300px; margin:70px 0;}
+#slider >.product-img > .explain > .explain-wrap {width:525px; height:50px;} 
+#slider >.product-img > .explain > .explain-wrap > h1 {font-size: 12px;}
+#slider >.product-img > .explain > .explain-wrap > ul > li {width: 50%;
+float: left;
+}
+#slider >.product-img > .menu > li > button {border:0.5px solid lightslategray; background:none;}
+li, dl {margin: 0; padding: 0; list-style: none;}
+
+.buy {width: 650px; height:100px;  display:flex; justify-content:space-between;}
+.buy > .button {width:300px; height:80px; }
+.buy > .gift {width:190px; height:80px;  display:flex; justify-content:space-between;}
+.buy > .gift >.giftbox {width:70px; height:70px; background-color: #fa5500; margin:7px 0;}
+.buy > .gift >.giftbox > img {width:70%; height:70%; margin:0 0 0 10px; }
+.buy > .gift >.giftboxtwo {width:70px; height:70px; background-color: white; margin:7px 0; border:1px solid gray;}
+.buy > .gift >.giftboxtwo > img {width:50%; height:50%; margin:10px 0 0 15px; }
+.buy > .gift >.giftbox > p {margin:-5px 0 0 6px; font-size: 13px;
+color: #fff;}
+.buy > .gift >.giftboxtwo > p {margin:-3px 0 0 15px; font-size: 13px;
+color:gray;}
+
+.price > h3 {margin-top: 10px;
+font-size: 14px;
+font-family: "ProximaNova-Regular","Noto Sans KR";
+color: #000;}
+.review > .star  > button{ border:none;
+position: relative;
+background-color: white;
+margin-left: 14px;
+color: #333;
+font-family: "ProximaNova-Regular","Noto Sans KR";
+font-size: 12px;
+line-height: 18px;
+border-bottom: 1px solid #333;
+padding-right: 13px;}
+.review > p > .top {font-size: 18px; font-family: 'proxima Nova'; color: #ccc; margin:0 0 0 100px;}
+.review > p  > .dc {font-size: 18px;
+font-weight: bold; margin:0 0 0 70px;}
+.review > p > .new {color: #000;
+font-size: 16px;
+font-family: "ProximaNova-Regular"; margin:0 0 0 40px;}
+.review > p > .kakao {font-size: 14px;}
+.controll {margin:0 0 0 150px;}
+.order > p > button{background:none; border:1px solid #000; margin:0 0 0 20px;}
+.order > .choice {line-height: 38px;
+color: #010101;
+font-size: 14px;
+font-family: "ProximaNova-Regular","Noto Sans KR";
+text-indent: 20px;}
+
+.order > .choice > button {width:300px; display: block;
+height: 40px;
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+padding-right: 25.5px; line-height: 38px;
+color: #010101;
+font-size: 15px;
+font-family: "ProximaNova-Regular","Noto Sans KR";
+text-indent: 20px; display: inline-block; margin:0 0 0 100px;}
+.buy > .button > button {width: 230px;
+height: 70px;
+font-family: "ProximaNova-Semibold","Noto Sans KR";
+font-weight: 400px;
+line-height: 68px;
+font-size: 20px;
+border-color: #000; background:none; margin:7px 0;}
+.textarea{background-color: #f8f8f8;
+padding: 15px 20px 21px;
+margin-bottom: 25px;
+font-family: "ProximaNova-Regular","Noto Sans KR";
+font-size: 13px; margin:-40px 0;}
+.textarea > h1 {font-family: "ProximaNova-Regular","Noto Sans KR";
+color: #323232;
+font-size: 14px;
+padding: 0;
+margin-bottom: 10px;}
+
+
+
+#made {width:1240px; height:250px; margin:0 auto;}
+#made > .box-wrap {width:1240px; height:160px; justify-content:space-between; display:flex;}
+#made > .box-wrap  > .img-wrap {width:120px; height:160px; }
+#made > .box-wrap  > .img-wrap > img{width:100%; height:100%;}
+
+#product {width:1240px; height:33500px;  margin:0 auto;}
+#product > .nav { background-color: lightcoral; width: 100%;
+}
+#product > .nav > ul > li { width:280px; margin:0 auto;
+border-bottom: #000;
+height: 62px;
+margin-bottom: -2px;
+display: block;
+height: 57px;
+color: #333;
+font-family: "ProximaNova-Regular"; float: left;
+border: 1px solid #b5b5b5;
+
+border-left-width: 0;
+background-color: #fff;
+font-size: 18px;
+line-height: 57px;
+text-align: center; }
+#product > .nav > ul > .glaemf {border :1px solid #010101; border-bottom: none;}
+#product > .nav > ul > li {border-bottom: 1px solid #010101;}
+#product > .nav > ul {display: block; margin-block-start: 1em; margin-inline-start: 0px; padding-inline-start: 40px;}
+
+#product > .product-wrap > .product-img > img {width:100%; height:100%;}
+
+
+#product > .product-imglistwrap {width:1240px; height:33000px;  display:flex; justify-content: center; }
+#product > .product-imglistwrap > .product-imglist {width:960px; height:33000px; margin:20px 0; }
+
+#also {width:1240px; height:300px; margin:0 auto;}
+#also > h4 {margin-top: 80px;
+padding-bottom: 14px;
+font-family: "ProximaNova-Semibold","NotoSansKR-Medium";
+font-size: 18px;}
+#also > table {border-top: 2px solid #171717; 
+border-bottom: 1px solid #171717;
+table-layout: fixed;
+margin-bottom: 60px; display: table; border-collapse: separate; text-indent: initial;
+border-spacing: 2px; }
+
+#also > table > tr {
+vertical-align: inherit;
+border-color: inherit;}
+#also > table > tr > th {
+font-family: "ProximaNova-Regular","Noto Sans KR";
+color: #333;
+font-size: 14px;
+border-top: 1px solid #d9d9d9;
+text-align: left;}
+th,td {border-bottom:1px solid lightgray; font-size:12px;}
+td {width:700px;}
+#also > p {color: lightslategray;}
+
+
+#like    {width:1240px; height:250px; margin:100px auto;}
+#like > .box-wrap {width:1240px; height:160px; justify-content:space-between; display:flex;}
+#like > .box-wrap  > .img-wrap {width:120px; height:160px; }
+#like > .box-wrap  > .img-wrap > img{width:100%; height:100%;}
+
+#last-review {width:1240px; height:500px; margin:0 auto;}
+#last-review > .nav { background-color: lightcoral; width: 100%;}
+#last-review > .nav > ul > li { width:280px; margin:0 auto;
+border-bottom: #000;
+height: 62px;
+margin-bottom: -2px;
+display: block;
+height: 57px;
+color: #333;
+font-family: "ProximaNova-Regular"; float: left;
+border: 1px solid #b5b5b5;
+
+border-left-width: 0;
+background-color: #fff;
+font-size: 18px;
+line-height: 57px;
+text-align: center; }
+#last-review > .nav > ul > .flqb {border :1px solid #010101; border-bottom: none;}
+#last-review > .nav > ul > li {border-bottom: 1px solid #010101;}
+#last-review > .nav > ul {display: block; margin-block-start: 1em; margin-inline-start: 0px; padding-inline-start: 40px;}
+#last-review > .nav > ul > .anjwl {border-left:1px solid  #b5b5b5;}
+
+#last-review > .last-review-wrap {width:430px; height:250px; margin:5px 0; float:left;}
+#last-review > .last-review-wrap >h4 {font-size: 18px;
+line-height: 26px;
+margin: 0 0 8px 0;
+padding-bottom: 0;}
+#last-review > .last-review-wrap > p {font-size: 14px;
+line-height: 20px;
+color: #666;
+margin-bottom: 38px;}
+#last-review > .last-review-wrap > .star{font-size:25px; color:black;}
+
+
+
+
+#last-review > .last-product {width:1240px; height:150px; float:left; display: flex; justify-content: space-between;}
+#last-review > .last-product > .imgwrap {width:150px; height:150px;}
+#last-review > .last-product > .imgwrap > img {width:100%; height:100%;}
+
+#QA {width:1240px; height:600px;  margin:0 auto;}
+#QA > .nav { background-color: lightcoral; width: 100%;
+margin:30px 0;}
+#QA> .nav > ul > li { width:280px; margin:0 auto;
+border-bottom: #000;
+height: 62px;
+margin-bottom: -2px;
+display: block;
+height: 57px;
+color: #333;
+font-family: "ProximaNova-Regular"; float: left;
+border: 1px solid #b5b5b5;
+
+border-left-width: 0;
+background-color: #fff;
+font-size: 18px;
+line-height: 57px;
+text-align: center; }
+#QA > .nav > ul > .glaemf {border :1px solid #010101; border-bottom: none;}
+#QA > .nav > ul > li {border-bottom: 1px solid #010101;}
+#QA > .nav > ul {display: block; margin-block-start: 1em; margin-inline-start: 0px; padding-inline-start: 40px;}
+#QA > .nav > ul > .anjwl {border-left:1px solid  #b5b5b5;}
+#QA > .nav > ul > .QA2{border-left:1px solid  #000; border-bottom:none; border-top:1px solid #010101; border-right:1px solid #010101 ;}
+
+
+#QA > table {width:1240px;border-top: 1px solid #171717; 
+border-bottom: 1px solid #171717;
+table-layout: fixed;
+margin-bottom: 100px; display: table; border-collapse: separate; text-indent: initial;
+border-spacing: 20px; font-size:12px; }
+
+td {border-bottom:1px solid lightgray; padding-bottom: 20px;}
+.unknown {border-bottom: none;}
+td > img {width:15px; height:15px;}
+
+#QA > table >.unknown > {border-bottom:none;}
+#QA > .button-wrap {width:600px; height:20px; margin:-50px 0 0 420px; }
+#QA > .button-wrap > button {border:none; background: none;}
+
+
+
+
+
+
+
+
+
+.foot {background-color:gray; width:100%; height:40px; }
+.foot > .nav > ul > li{ float:left; margin:0 50px; list-style: none;  padding:10px 0; color:white; font-size:13px;}
+.foot > .nav  > ul {width:1240px; height:40px;background-color:gray; margin:0 0 0 30px;  }
+
+.text { width:750px; height:70px; font-size:12px; margin:30px 0;}
+.right { width:500px; height:70px; margin:20px 0 0 100px; font-size:12px; }
+.right > h1 {font-size: 12px;}
+
+
+
+footer{width:1240px; height:150px;  margin:0 auto; justify-content:space-between;  display:flex;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+</head>
+
+
+<header>
+<header>
+<div id="top">
+<img src="https://image.wconcept.co.kr/images/builder/0/3/14/275/PC_top_banner_1920x100_20230721111136.jpg" alt="">
+
+</div>
+
+<div id="menu">
+
+<div class="high">
+
+<div class="logobox">
+    <a href="#"><img src="https://static.wconcept.co.kr/web/images/common/svg/ico_gnb_logo_176.svg"alt=""></a>
+</div>
+<div class="searchbox">
+    
+    <input type="search" placeholder="search">
+    <button type="submit" name="button" class="btn_search" onclick=""><img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/search-64.png" alt=""></button>
+    
+</div>
+    <div class="login">
+
+    <ul class="util">
+        <li>
+        <span class="icon"><img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/users-64.png"></span><br>
+        <a><strong>JOIN</strong></a>
+        </li>
+
+        <li>
+        <span class="icon"><img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/unlock-64.png"></span><br>
+        <a><strong>LOGIN</strong></a>
+        
+        </li>
+
+        <li>
+            <span class="icon"><img src="https://cdn3.iconfinder.com/data/icons/font-awesome-regular-1/512/circle-user-64.png"></span><br>
+            <a><strong>MY</strong>
+            </a>
+            </li>
+
+            <li>
+            <span class="icon"><img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/shopping-cart-64.png"></span><br>
+            <a> <strong>0</strong>
+            </a>
+            </li>
+
+
+
+
+    </ul>
+
+
+    </div>
+    </div>
+
+
+</div>
+
+
+<nav>
+
+    <div class="nav-wrap">
+
+    <div class="nav-left">
+        
+        
+        <div class="button"><button>CATEGORY<br></button>
+        </div>
+            
+        
+    <ul>
+    <li>NEW</li>
+    <li>WOMEN</li>
+    <li>MEN</li>
+    <li>BEAUTY</li>
+    <li>LIFE</li>
+    <li>SALE</li>
+        </ul>
+    </div>
+    <div class="nav-right">
+
+    <ul>
+        <li>DESIGNER</li>
+        <li>PRE-SHOW</li>
+        <li>ORIGINAR</li>
+        <li>EVENT</li>
+        <li>BEST</li>
+    </ul>
+    </div>
+
+    </div>
+
+
+</nav>
+
+
+
+</header>
+
+</header>
+
+<div id=slider>
+
+
+<div class="product-img">
+    <ul class="menu">
+        <li>HOME<button><img src="https://cdn1.iconfinder.com/data/icons/bootstrap-vol-2/16/chevron-compact-down-64.png"></button></li>
+        <li>></li>
+        <li>WOMEN<button><img src="https://cdn1.iconfinder.com/data/icons/bootstrap-vol-2/16/chevron-compact-down-64.png"></button></li>
+        <li>></li>
+        <li>ACC<button><img src="https://cdn1.iconfinder.com/data/icons/bootstrap-vol-2/16/chevron-compact-down-64.png"></button></li>
+        <li>></li>
+        <li>헤어액세사리<button><img src="https://cdn1.iconfinder.com/data/icons/bootstrap-vol-2/16/chevron-compact-down-64.png"></button></li>
+        <li>></li>
+        <li>머리끈<button><img src="https://cdn1.iconfinder.com/data/icons/bootstrap-vol-2/16/chevron-compact-down-64.png"></button></li>
+    </ul>
+    <div class="img-wrap"><img src="https://product-image.wconcept.co.kr/productimg/image/img0/89/302803189_PA63551.jpg"></div>
+
+    <div class="explain">
+
+        <div class="img-wrap">
+            <div class="img"><img src="https://product-image.wconcept.co.kr/productimg/image/img0/48/302196348_LL93024.jpg"></div>
+            <div class="img"><img src="https://product-image.wconcept.co.kr/productimg/image/img0/48/302196348_add1_OB61721.jpg?thumbnail=60x80"></div>
+        </div>
+
+        <div class="explain-wrap">
+            <h1><span>관련 기획전</span></h1>
+            <ul>
+                <li>- JEWELRY 5DAYS SALE!</li>
+                    
+                <li>- STEP INTO SUMMER HAIR ACC</li>
+
+            </ul>
+            
+        </div>
+
+    </div>
+
+    
+</div>
+
+<div class="product-explain">
+    <div class="price">
+        <h2>OVLA</h2>
+        <h3>organza washed soft color scrunchie (5 color)</h3>
+        <div class="review">
+<p class="star"><img src="//static.wconcept.co.kr/web/images/common/svg/ico_star_rating_fill.svg"><span>4.9</span>  <button>17개 리뷰 ></button></p>
+<p >정상가 <span class="top">32,000원</span></p>
+<p>할인적용가 <span class="dc">24,000원</span></p>
+<p>신규회원 혜택가<span class="new">21,600원</span></p>
+<p>추가혜택가 <span class="kakao">카카오페이 4000원 할인</span>
+매일 오전 10시 부터 선착순 450명, 카카오페이머니 8만원 이상 결제 시 4천원 즉시할인(초과 시 미적용)</p>
+
+    <div class="controll">
+        <br> <button><a><</a></button>
+        <button><a>></a></button>
+
+    </div>
+            
+        </div>
+        
+        
+    </div>
+    <div class="order">
+        <p>포인트 적립  240 p 적립 <button>포인트안내</button></p><br>
+        <p>쇼핑가이드<button>쿠폰</button></p><br>
+    
+
+
+
+    <p class="choice">색상<button>선택해주세요</button> </p>
+    
+
+    <div class="buy">
+        <div class="button"><button>바로 구매</button></div>
+        <div class="button"><button>쇼핑백 담기</button></div>
+        <div class="gift">
+            <div class="giftbox"><img src="//static.wconcept.co.kr/web/images/product/svg/ico_prod_gift.svg"><p>선물하기</p></div>
+            <div class="giftboxtwo"><img src="//static.wconcept.co.kr/web/images/product/svg/ico_prod_heart_off.svg"><p>2,598</p></div>
+        </div>
+        
+        </div>
+
+    </div>
+
+    <div class="textarea">
+        <h1>상품 요약 정보</h1>
+        <ul>
+            <li><span>상품코드</span>302196348</li>
+            <li><span>소재</span>오간자</li>
+            <li><span>제조사/원산지</span>오블라 / 대한민국</li>
+            <li><span>배송비</span>50,000원 미만구매시 배송비 3,000원</li>
+            <li><span>배송정보</span>결제완료 후 평균 3일 이내 출고(공휴일 제외)</li>
+            
+            
+        </ul>
+    </div>
+
+    
+</div>
+
+
+
+</div>
+
+<section id="made">
+<h1>Made by OVLA</h1>
+<div class="box-wrap">
+    <div class="img-wrap"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/34/302738934_DN17905.jpg?RS=300"></div>
+    <div class="img-wrap"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/41/302738941_HJ96385.jpg?RS=300"></div>
+    <div class="img-wrap"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/67/302767367_AT83798.jpg?RS=300"></div>
+    <div class="img-wrap"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/08/302739008_UF39942.jpg?RS=300"></div>
+    <div class="img-wrap"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/72/302861972_NF11790.jpg?RS=300"></div>
+    <div class="img-wrap"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/81/302738981_QJ38849.jpg?RS=300"></div>
+    <div class="img-wrap"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/43/303033843_BC40156.jpg?RS=300"></div>
+    <div class="img-wrap"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/58/302862158_MG78164.jpg?RS=300"></div>
+
+
+</div>
+</section>
+
+
+<section id="product">
+
+<div class="nav">
+    <ul>
+        <li class="glaemf">DETAIL</li>
+        <li>REVIEW</li>
+        <li>Q&A</li>
+        <li>RETURN & DELIVERRY</li>
+    </ul>
+</div>
+
+    <div class="product-imglistwrap">
+    <div class="product-imglist"><img src="http://product-image.wconcept.co.kr/images/upload/board/302287702/2023021902542424.jpg">,<img src="http://product-image.wconcept.co.kr/images/upload/board/302287702/2023033016010034.jpg">
+        ,<img src="http://product-image.wconcept.co.kr/images/upload/board/302496817/2023041713104119.jpg">
+    ,<img src="http://product-image.wconcept.co.kr/images/upload/board/302287703/2023033016001478.jpg"></div>
+    </div>
+    
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</section>
+
+<section id="also">
+
+<h4>상품 정보 고시</h4>
+<table>
+    <colgroup>
+        <col style="width:525px "><col>
+    </colgroup>
+    <tr>
+        <th>소재</th>
+        <td>POLYURETHANE 50% , POLYESTER 50%</td>
+    </tr>
+    <tr>
+        <th>색상</th>
+        <td>BLACK, SILVER, WHITE</td>
+    </tr>
+
+    <tr>
+        <th>제조국(원산지)</th>
+        <td>대한민국</td>
+    </tr>
+
+    <tr>
+        <th>품질보증기준</th>
+        <td>전자상거래법 준수</td>
+    </tr>
+    
+    <tr>
+        <th>종류</th>
+        <td>백팩</td>
+    </tr>
+
+    
+</table>
+<p>
+본 상품 정보 및 거래 조건의 내용은 판매자가 직접 등록한 것으로서 등록된 정보에 대한 책임은 판매자에게 있습니다.
+</p>
+
+
+
+</section>
+
+<section id="like">
+
+<h1>YOU MAY ALSO LIKE</h1>
+<div class="box-wrap">
+    <div class="img-wrap"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/34/302738934_DN17905.jpg?RS=300"></div>
+    <div class="img-wrap"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/41/302738941_HJ96385.jpg?RS=300"></div>
+    <div class="img-wrap"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/67/302767367_AT83798.jpg?RS=300"></div>
+    <div class="img-wrap"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/08/302739008_UF39942.jpg?RS=300"></div>
+    <div class="img-wrap"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/72/302861972_NF11790.jpg?RS=300"></div>
+    <div class="img-wrap"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/81/302738981_QJ38849.jpg?RS=300"></div>
+    <div class="img-wrap"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/43/303033843_BC40156.jpg?RS=300"></div>
+    <div class="img-wrap"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/58/302862158_MG78164.jpg?RS=300"></div>
+
+
+</div>
+</section>
+
+    
+</div>
+
+
+
+
+
+
+</section>
+
+
+<section id="last-review">
+
+<div class="nav">
+    <ul>
+        <li class="anjwl">DETAIL</li>
+        <li class="flqb">REVIEW</li>
+        <li>Q&A</li>
+        <li>RETURN & DELIVERRY</li>
+    </ul>
+</div>
+
+<div class="last-review-wrap">
+
+    <br><br><h4>상품 만족도 (138)</h4>
+    <p >구매하신 분들의 상품에 대한 평점입니다.</p>
+    <p class="star"><img src="//static.wconcept.co.kr/web/images/common/svg/ico_evaluate_fIll_30.svg"> 4.8/5.0</p>
+</div>
+
+<div class="size">
+    
+
+
+</div>
+
+<div class="last-product">
+    
+        <div class="imgwrap"><img src="https://media.wconcept.co.kr/review/302803189/302803189_1691075446897.jpeg?RS=400"></div>
+        <div class="imgwrap"><img src="https://media.wconcept.co.kr/review/302803189/302803189_1691032327937.jpg?RS=400"></div>
+        <div class="imgwrap"><img src="https://media.wconcept.co.kr/review/302803189/302803189_1690984767148.jpeg?RS=400"></div>
+        <div class="imgwrap"><img src="https://media.wconcept.co.kr/review/302803189/302803189_1690984729026.jpeg?RS=400"></div>
+        <div class="imgwrap"><img src="https://media.wconcept.co.kr/review/302803189/302803189_1690984682100.jpeg?RS=400"></div>
+        <div class="imgwrap"><img src="https://media.wconcept.co.kr/review/302803189/302803189_1690972028347.jpg?RS=400"></div>
+        <div class="imgwrap"><img src="https://media.wconcept.co.kr/review/302803189/302803189_1690954249531.jpeg?RS=400"></div>
+        <div class="imgwrap"><img src="https://media.wconcept.co.kr/review/302803189/302803189_1690954249354.jpeg?RS=400"></div>
+
+        
+    
+</div>
+
+    
+
+</section>
+
+<section id="QA">
+
+<div class="nav">
+    <ul>
+        <li class="anjwl">DETAIL</li>
+        <li class="flqb">REVIEW</li>
+        <li class="QA2">Q&A</li>
+        <li>RETURN & DELIVERRY</li>
+    </ul>
+</div>
+
+
+<table>
+    <colgroup>
+        <col style="width:100%; "><col>
+    </colgroup>
+    <tr>
+        
+        <td>교환건 배송 <img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-68-64.png"></td>
+    </tr>
+    <tr>
+       
+        <td>배송문의<img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-68-64.png"></td>
+    </tr>
+
+    <tr>
+        <td>상품 교환건 배송<img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-68-64.png"></td>
+    </tr>
+
+    <tr>
+       
+        <td>배송문의<img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-68-64.png"></td>
+    </tr>
+    
+    <tr>
+        
+        <td class="unknown">배송문의<img src="https://cdn3.iconfinder.com/data/icons/streamline-icon-set-free-pack/48/Streamline-68-64.png"></td>
+    </tr>
+
+    
+</table>
+<div class="button-wrap">
+
+    <button><a><<</a></button>
+    <button><a><</a></button>
+    <button><a>1</a></button>
+    <button><a>2</a></button>
+    <button><a>3</a></button>
+    <button><a>4</a></button>
+    <button><a>5</a></button>
+    <button><a>6</a></button>
+    <button><a>7</a></button>
+    <button><a>8</a></button>
+    <button><a>9</a></button>
+    <button><a>10</a></button>
+    <button><a>></a></button>
+    <button><a>>></a></button>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+<nav class="foot">
+
+<div class="nav">
+    
+
+    
+        
+        
+    
+        
+    <ul>
+    <li>회사소개</li>
+    <li>입점상담</li>
+    <li>이용약관</li>
+    <li>개인정보처리방침</li>
+    <li>고객센터</li>
+    <li>채용정보</li>
+    <li>GLOBAL</li>
+        </ul>
+    </div>
+    
+
+    
+
+
+</nav>
+
+
+<footer>
+
+
+
+<div class="text">
+
+상호명 : ㈜더블유컨셉코리아 ㅣ 대표자 : 이은철 ㅣ 주소 : 서울특별시 강남구 테헤란로 231, EAST동 20층(역삼동, 센터필드)<br>
+사업자등록번호 : 211-88-19183 ㅣ 통신판매업신고 : 제2009호-서울강남-00847호 
+<a href="" class="micro_btn"  target="_blank">사업자정보확인</a>
+│ 개인정보보호책임자 : 허선희 │ 호스팅서비스 : ㈜ 더블유컨셉코리아 <br>
+
+            COPYRIGHT ⓒ ㈜더블유컨셉코리아 ALL RIGHTS RESERVED
+    </div>
+        
+
+<div class="right">
+
+
+<h1>소비자피해보상보험</h1>
+<p>
+고객님은 안전거래를 위해 현금 결제 시, Wconcept 에서 가입한
+<br>
+
+소비자피해보상보험 서비스를 이용하실 수 있습니다.</p>
+<span> 보상대상 : 미배송/반품, 환불거부/쇼핑몰부도 </span>
+<a>서비스 가입사실 확인</a>
+</div>
+
+</footer>
+
+</body>

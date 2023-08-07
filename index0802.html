@@ -1,0 +1,1533 @@
+div<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+* {margin:0; box-sizing:border-box;}
+a{text-decoration:none; color:black;}
+
+header {width:100%; height:200px; }
+
+#top {width:100%; height:80px; }
+#top > img {width:100%; height:100%;}
+
+#menu {width:1240px; height:60px;  margin:0 auto;}
+#menu > .high {width:1240px; height:60px;  justify-content:space-between; display:flex; }
+#menu > .high > .logobox {width:200px; height:60px; }
+#menu > .high > .logobox > a > img {width:100%; height:100%;}
+#menu > .high > .searchbox {width:400px; height:60px;  }
+#menu > .high > .login {width:300px; height:60px; }
+input[type="search"] {width: 335px;
+    height: 44px;
+    display: block;
+    float: left;
+    border: none;
+    font-size: 14px;
+    line-height: 44px;
+    background: none;
+    padding: 0; font: inherit;
+    margin: 0;
+    color: inherit;}
+    input[type="search"]:after{content:"";
+    display: block;
+    width: 360px;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    bottom: 15px;
+    left: 16px;}
+    button[type="submit"] > img {width:20px; height:20px; margin:15px 0; }
+    button[type="submit"] {background:none; border:none;}
+
+    #menu > .high > .login > .util > li {font-size:10px; float:left; list-style: none; padding:10px 0;}
+    #menu > .high > .login > .util > li >.icon > img {width:20px; height:20px; float:left; margin:0 20px;}
+    #menu > .high > .login  >.util > li > a {margin:10px 18px;}
+
+
+
+nav {width:100%; height:60px;   justify-content:center; display:flex }
+nav > .nav-wrap {width:1240px; height:60px;  justify-content:space-between; display:flex;}
+nav > .nav-wrap > .nav-left {width:620px; height:60px; }
+nav > .nav-wrap > .nav-right {width:620px; height:60px; }
+nav > .nav-wrap > .nav-left > ul > li { font-size:10px; float:right; margin:-35px 40px 10px 0; list-style: none;  padding:10px 0;;}
+nav > .nav-wrap > .nav-right > ul > li { font-size:10px; float:left; margin:25px 30px; list-style: none;  padding:10px 0;}
+nav > .nav-wrap > .nav-left > .button > button{width:200px; height:60px; background:none; border:none;}
+
+
+
+
+
+
+
+
+
+
+
+
+#slider{width:1240px; height:600px; background-color:gray; margin:0 auto;}
+
+#slider > img {width:100%; height:100%;}
+
+#stylestory {width:1240px; height:812px;  margin:0 auto;}
+#stylestory > .box-wrap {width:1240px; height:718px; justify-content:space-between; display:flex; text-align:center;}
+#stylestory >.box-wrap > .box {width:308.5px; height:718px; }
+#stylestory > h1 {font-size:40px; color:black; letter-spacing:20px; padding:20px 20px 20px 0px; text-align:center; font-weight: 100;}
+#stylestory > .box-wrap > .box > .text {width:308.5px; height:200px; margin:34px 0;}
+
+
+.text-content {height:72px; margin:0 auto; color: #666; font-family: "Noto Sans KR"; font-size: 12px; line-height: 1.5; word-break: keep-all; margin:30px 0 0 0px;}
+.text-title {display: block;
+margin-top: 34px;
+overflow: hidden;
+white-space: nowrap;
+padding: 0 50px;
+color: #333;
+font-family: "ProximaNova-Bold","NotoSansKR-Medium";
+font-size: 15px;
+letter-spacing: .17em;}
+/* ^^^^^^^^^^^^ */
+
+
+#stylestory >.box-wrap > .box >.img-wrap { width:308.5px; height:400px; background-color:green;}
+#stylestory >.box-wrap > .box >.img-wrap > a > img {width:100%; height:100%;}
+
+
+
+
+
+#banner2 {width:100%; height:150px; background-color:black; margin:0 auto; position:relative;}
+#banner2 > ul > li {text-align:center;}
+
+#new {width:1240px; height:594px; margin:0 auto; }
+#new > .box-wrap {width:1240px; height:500px; justify-content:space-between;  text-align:left; display:flex;}
+#new >.box-wrap > .box  {width:230px; height:500px;} 
+#new > h1 {font-size:40px; color:black; letter-spacing:20px; text-align:center; padding:20px 20px 20px 0px; font-weight: 100;}
+#new >.box-wrap > .box >.img-wrap {width:230px; height:330px; background-color:red;}
+#new >.box-wrap > .box >.img-wrap > a > img {width:100%; height:100%;}
+#new>.box-wrap > .box > .text-wrap {width:230px; height:150px; background-color:}
+#new>.box-wrap > .box > .text-wrap > .title { font-size: 16px; font-family:"ProximaNova-Bold"; margin:0 0 8px;}
+#new>.box-wrap > .box > .text-wrap > .line {margin-top:3px 0 0; margin-bottom: 0; color: #555; font-size: 12px;}
+.price {margin:22px 0 14px; height:50px;}
+.base-price {font-size: 18px; margin:0 auto;}
+.discount{ color: #808080; font-size: 14px; text-decoration: line-through; }
+.price > .sale {float:right; color:red; margin:10px 0;}
+
+
+#makeit {width:1240px; height:494px; margin:0 auto;}
+#makeit > .box-wrap {width:1240px; height:400px; justify-content:space-between;  text-align:left; display:flex;}
+#makeit >.box-wrap > .box  {width:160px; height:400px;}
+#makeit > h1 {font-size:40px; color:black; letter-spacing:20px; text-align:center; padding:20px 20px 20px 0px; font-weight: 100;}
+#makeit >.box-wrap > .box >.img-wrap {width:150px; height:200px; background-color:khaki;}
+#makeit >.box-wrap > .box >.img-wrap > a > img {width:160px; height:200px;}
+#makeit>.box-wrap > .box > .text-wrap {width:160px; height:150px;}
+#makeit>.box-wrap > .box > .text-wrap > .title { font-size: 14px; font-family:"ProximaNova-Bold"; margin:0 0 8px;}
+#makeit >.box-wrap > .box > .text-wrap > .line {margin-top:3px 0 0; margin-bottom: 0; color: #555; font-size: 10px;}
+.price {margin:22px 0 14px; height:50px;}
+.base-price {font-size: 14px; margin:0 auto;}
+.discount{ color: #808080; font-size: 12px; text-decoration: line-through; }
+.price > .sale {float:right; color:red; font-size:8px; margin:5px 0;}
+.only {font-size:10px; border:1px solid #959595; text-align:center; padding:1px 3px;}
+.cupon {font-size:10px; border:1px solid #959595; text-align:center; padding:1px 3px;}
+
+
+
+#exclusive {width:1240px; height:444px; margin:0 auto;}
+#exclusive  > .box-wrap {width:1240px; height:300px; justify-content:space-between;  text-align:left; display:flex;}
+#exclusive  > .box-wrap > .box > img {width:100%; height:100%;}
+#exclusive  >.box-wrap > .box  {width:400px; height:300px; background-color:palevioletred;}
+#exclusive  > h1 {font-size:40px; color:black; letter-spacing:20px; text-align:center; padding:20px 20px 20px 0px; font-weight: 100;}
+#exclusive  >.box-wrap > .box >.img-wrap {width:400px; height:300px; background-color:khaki;}
+#exclusive > .box2 {width:1240px; height:350px; background-color:blue; display:inline-block;}
+#exclusive >.box-wrap > .box >.img-wrap > a > img {width:100%; height:100%;}
+
+#exclusive2 {width:1240px; height:400px; margin:0 auto;}
+#exclusive2 > .box-wrap {width:1240px; height:400px; justify-content:space-between;  text-align:left; display:flex;}
+#exclusive2 >.box-wrap > .box  {width:150px; height:400px;}
+#exclusive2 >.box-wrap > .box >.img-wrap {width:150px; height:200px;;}
+#exclusive2 >.box-wrap > .box >.img-wrap > a > img {width:100%; height:100%;}
+#exclusive2>.box-wrap > .box > .text-wrap {width:150px; height:150px;}
+#exclusive2 >.box-wrap > .box > .text-wrap > .title { font-size: 13px; font-family:"ProximaNova-Bold"; margin:0 0 8px;}
+#exclusive2 >.box-wrap > .box > .text-wrap > .line {margin-top:3px 0 0; margin-bottom: 0; color: #555; font-size: 9px;}
+.price {margin:22px 0 14px; height:50px;}
+.base-price {font-size: 14px; margin:0 auto;}
+.discount{ color: #808080; font-size: 11px; text-decoration: line-through; }
+.price > .sale {float:right; color:red; font-size:8px; margin:5px 0;}
+
+
+
+
+
+#beauty {width:1240px; height:650px; ; margin:0 auto;}
+#beauty > .box-wrap {width:1240px; height:550px; justify-content:space-between;  text-align:left; display:flex;}
+
+#beauty > h1 {font-size:40px; color:black; letter-spacing:20px; padding:20px 20px 20px 0px; text-align:center; font-weight: 100;}
+#beauty > .box-wrap > .imgbox {width:460px; height:550px;}
+#beauty > .box-wrap > .prodect {width:770px; height:550px;  }
+.list {width:770px; height:270px; margin:0 0 10px; justify-content:space-between;  text-align:left; display:flex; }
+#beauty > .box-wrap > .imgbox > a > img{width:100%; height:100%;}
+#beauty > .box-wrap > .prodect > .list > .box {width:150px; height:270px;}
+#beauty > .box-wrap > .prodect > .list > .box >.img-wrap {width:150px; height:190px; ;}
+#beauty > .box-wrap > .prodect > .list > .box >.img-wrap > a > img {width:100%; height:100%;}
+
+
+
+#beauty > .box-wrap > .prodect > .list > .box > .text-wrap {width:150px; height:80px; }
+#beauty > .box-wrap > .prodect > .list > .box > .text-wrap > .title { font-size: 13px;font-family:"ProximaNova-Bold"; margin:0 0 7px;}
+#beauty > .box-wrap > .prodect > .list > .box > .text-wrap > .line {margin-top:3px 0 0; margin-bottom: 0; color: #555; font-size: 5px;}
+.price {margin:10px 0; height:50px;}
+.base-price {font-size: 14px; margin:0 auto;}
+.discount{ color: #808080; font-size: 11px; text-decoration: line-through; }
+.price > .sale {float:right; color:red; font-size:8px; margin:5px 0;}
+
+
+
+#tv {width:1240px; height:450px; background-color:black; margin:0 auto; }
+#tv > .box-wrap {width:1240px; height:350px; background-color:black; justify-content:center;  display:flex;  margin:30px 0;}
+#tv > .box-wrap > .box {width:800px; height:400px; background-color:black; justify-content:space-between;  text-align:left; display:flex; margin:50px 0;}
+#tv > .box-wrap > .box > .img-wrap {width:190px; height:350px; background-color:black;}
+#tv > .box-wrap > .box > .img-wrap > .imgbox {width:190px; height:200px; background-color:firebrick;}
+#tv > .box-wrap > .box > .img-wrap > .imgbox > a > img{width:100%; height:100%;}
+
+#tv> .box-wrap > .box > .img-wrap> .text-wrap > .title { font-size: 16px; font-family:"ProximaNova-Bold"; margin:0 0 8px;}
+#tv >.box-wrap > .box > .img-wrap > .text-wrap > .line {margin-top:3px 0 0; margin-bottom: 0; color: #555; font-size: 12px;}
+#tv >.box-wrap > .box > .img-wrap > .text-wrap > .line >p > a {color:white;}
+#tv >.box-wrap > .box > .img-wrap > .text-wrap > .title > h5 > a {color:white;}
+#tv >.box-wrap > .box > .img-wrap > .text-wrap {margin:10px 0; height:50px;}
+
+#crocx {width:100%; height:500px; background-color:white; margin:100px 0;}
+#crocx >.img-wrap {justify-content:center;  display:flex; }
+#crocx >.img-wrap > a > img {width:800px; height:500px; justify-content:center;  display:flex; }
+
+
+
+#WDNA {width:1240px; height:500px; margin:0 auto;}
+#WDNA > .head-wrap >h1 {font-size:40px; color:black; letter-spacing:20px;  text-align:center; font-weight: 100;}
+#WDNA > .title {width:1240px; height:120px;}
+#WDNA > .product {width:1240px; height:210px; justify-content:space-between;  display:flex;}
+#WDNA > .product >.img-wrap {width:180px; height:210px; }
+#WDNA > .product >.img-wrap > a > img {width:100%; height:100%; }
+
+nav > ul > li  {float:left; margin:0 30px; list-style: none;  padding:10px 0; }
+
+#WDNA > .title > .name {width:1240px; height:50px; margin:0 auto;}
+#WDNA > .title > .menu >.category {width:1240px; height:40px; background-color:lawngreen; margin:0 auto; box-sizing:border-box;}
+
+
+ .foot {background-color:gray; width:100%; height:40px; }
+ .foot > .nav > ul > li{ float:left; margin:0 50px; list-style: none;  padding:10px 0; color:white; font-size:13px;}
+ .foot > .nav  > ul {width:1240px; height:40px;background-color:gray; margin:0 0 0 30px;  }
+
+ .text { width:750px; height:70px; font-size:12px; margin:30px 0;}
+ .right { width:500px; height:70px; margin:20px 0 0 100px; font-size:12px; }
+ .right > h1 {font-size: 12px;}
+
+
+
+ footer{width:1240px; height:150px;  margin:0 auto; justify-content:space-between;  display:flex;}
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+</head>
+<body>
+
+<header>
+<div id="top">
+<img src="https://image.wconcept.co.kr/images/builder/0/3/14/275/PC_top_banner_1920x100_20230721111136.jpg" alt="">
+
+</div>
+
+<div id="menu">
+
+<div class="high">
+
+<div class="logobox">
+  <a href="#"><img src="https://static.wconcept.co.kr/web/images/common/svg/ico_gnb_logo_176.svg"alt=""></a>
+</div>
+<div class="searchbox">
+ 
+  <input type="search" placeholder="search">
+  <button type="submit" name="button" class="btn_search" onclick=""><img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/search-64.png" alt=""></button>
+  
+</div>
+  <div class="login">
+
+    <ul class="util">
+      <li>
+      <span class="icon"><img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/users-64.png"></span><br>
+      <a><strong>JOIN</strong></a>
+      </li>
+
+      <li>
+        <span class="icon"><img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/unlock-64.png"></span><br>
+        <a><strong>LOGIN</strong></a>
+        
+        </li>
+
+        <li>
+          <span class="icon"><img src="https://cdn3.iconfinder.com/data/icons/font-awesome-regular-1/512/circle-user-64.png"></span><br>
+          <a><strong>MY</strong>
+          </a>
+          </li>
+
+          <li>
+           <span class="icon"><img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/shopping-cart-64.png"></span><br>
+           <a> <strong>0</strong>
+            </a>
+            </li>
+
+
+
+
+    </ul>
+
+
+  </div>
+  </div>
+
+
+</div>
+
+
+<nav>
+
+  <div class="nav-wrap">
+
+    <div class="nav-left">
+      
+      
+      <div class="button"><button>CATEGORY<br></button>
+        </div>
+          
+        
+  <ul>
+    <li>NEW</li>
+    <li>WOMEN</li>
+    <li>MEN</li>
+    <li>BEAUTY</li>
+    <li>LIFE</li>
+    <li>SALE</li>
+      </ul>
+    </div>
+    <div class="nav-right">
+
+    <ul>
+      <li>DESIGNER</li>
+      <li>PRE-SHOW</li>
+      <li>ORIGINAR</li>
+      <li>EVENT</li>
+      <li>BEST</li>
+  </ul>
+    </div>
+
+  </div>
+
+
+</nav>
+
+
+
+</header>
+
+
+
+
+
+
+<div id="slider">
+<img src="https://image.wconcept.co.kr/images/disp_issue/T230724171244_LLB.jpg" alt="">
+</div>
+
+<section id="stylestory">
+
+<h1>STYLE STORY</h1>
+
+<div class="box-wrap">
+
+<div class="box">
+
+<div class="img-wrap">
+
+<a href=""><img src="https://image.wconcept.co.kr/images/builder/1/4/15/37/pc_BEST%20REVIEW_20230728152547.jpg" alt=""></a>
+
+</div>
+
+<div class="text">
+
+<a href="" class="text-title"><strong>BAG&SHOES&ACC</strong></a>
+<p><a href="" class="text-content">단 3일, 베스트 잡화 아이템들을 최대 81% 세일 혜택으로 만나보세요</a></p>
+
+
+</div>
+
+
+</div>
+
+<div class="box">
+
+<div class="img-wrap">
+
+<a href=""><img src="https://image.wconcept.co.kr/images/builder/1/4/15/37/PC_SUPER%20DEAL_20230728152608.jpg" alt=""></a>
+
+</div>
+
+<div class="text">
+
+<a href="" class="text-title"><strong>BAU BY BRIDE AND YOU</strong></a>
+<p><a href="" class="text-content">매일 특별함을 선사하는 브랜드 BAU BY BRIDE AND YOU를<br>주말 한정 최대 70% 세일으로 만나보세요.</a></p>
+</div>
+</div>
+
+
+<div class="box">
+
+<div class="img-wrap">
+
+
+<a href=""><img src="https://image.wconcept.co.kr/images/builder/1/4/15/37/ST1_20230728103358.jpg" alt=""></a>
+</div>
+
+<div class="text">
+<a href="#" class="text-title"><strong>SCENT BRAND LINE UP</strong></a>
+<p>
+  <a href="#" class="text-content">최대 69% 세일 혜택으로 만나보는 향을 담은 뷰티 브랜드 라인업, 나를<br>표현하는 수많은 방법 중, '나만의 향기'로 기억속에 남겨보세요. </a>
+</p>
+</div>
+</div>
+
+<div class="box">
+
+<div class="img-wrap">
+
+<a href=""><img src="https://image.wconcept.co.kr/images/builder/1/4/15/37/MO2-2%EC%8A%A4%EC%9C%94%EC%9B%A8%EC%96%B4_20230711110230.jpg" alt=""></a>
+
+</div>
+
+<div class="text">
+<a href="" class="text-title"><strong> Colors Swimwear</strong></a>
+<p><a href="" class="text-content">눈부신 태양 아래 더욱 돋보일 레트로 컬러 스윔웨어<br>W컨셉이 선정한 컬러풀 스윔웨어를 지금 바로 만나보세요 ! 
+</a></p>
+
+</div>
+
+</div>
+</div>
+
+
+
+</section>
+
+<section id="banner2">
+<ul>
+<li><img src="https://image.wconcept.co.kr/images/builder/1/4/15/36/banner_620x150_1_20210621121510.png" alt="">
+</li>
+</ul>
+
+</section>
+
+<section id="new">
+
+<h1>WHAT'S NEW</h1>
+
+<div class="box-wrap">
+
+<div class="box">
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/67/303118467_JG20217.jpg?RS=384"alt=""></a>
+</div>
+
+<div class="text-wrap">
+
+<div class="title">
+<h5><a href="#">LEMEME</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">[단독]Sac Petit Nouvelle FrenchBlue</a></p><br>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">258,000</a></span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="box">
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/12/301654812.jpg?RS=384"alt=""></a>
+</div>
+
+<div class="text-wrap">
+
+<div class="title">
+<h5><a href="#">CPGN</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">Dont Cry Teddy 피그먼트 반팔티 스모크블랙</a></p>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">32,000</a></span>
+<span class="discount">50,000</span>
+<span class="sale">10%</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="box">
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/09/302805809_RF19619.jpg?RS=384"alt=""></a>
+</div>
+
+<div class="text-wrap">
+
+<div class="title">
+<h5><a href="#">REPERE</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">MIGNON : 미뇽 3피스 스윔 세트 (3color)</a></p><br>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">172,000</a></span>
+<span class="discount">154,000</span>
+<span class="sale">10%</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="box">
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/55/303165955_LG53932.jpg?RS=384"alt=""></a>
+</div>
+
+<div class="text-wrap">
+
+  <div class="title">
+<h5><a href="#">Current</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">STRAP MINI DRESS [LIGHT BLUE]</a></p><br>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">118,400</a></span>
+<span class="discount">140,000</span>
+<span class="sale">20%</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="box">
+  <div class="img-wrap">
+  <a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/35/301722035.jpg?RS=384"alt=""></a>
+  </div>
+  
+  <div class="text-wrap">
+  
+    <div class="title">
+  <h5><a href="#">FLOWOOM</a></h5>
+  </div>
+  
+  <div class="line">
+  <p><a href="#">Cup Cake Swimwear (3color)</a></p><br>
+  </div>
+  
+  <div class="price">
+  <span class="base-price"><a href="#">142,200</a></span>
+  <span class="discount">150,000</span>
+  <span class="sale">10%</span>
+  </div>
+  
+  </div>
+  
+  </div>
+
+
+</div>
+</section>
+
+<section id="makeit">
+
+<h1>MAKE IT YOURS</h1>
+
+<div class="box-wrap">
+
+
+<div class="box">
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/28/301774428.jpg?rs=233"alt=""></a>
+</div>
+
+<div class="text-wrap">
+
+<div class="title">
+<h5><a href="#">REPERE</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">MIGNON : 미뇽 스윔수트 (3color)</a></p><br>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">154.000</a></span>
+<span class="discount">175,000</span>
+<span class="sale">10%</span><br>
+<span class="cupon">쿠폰</span>
+<span class="only">단독</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="box">
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/70/302969370_KL42451.jpg?rs=233"alt=""></a>
+</div>
+
+<div class="text-wrap">
+
+<div class="title">
+<h5><a href="#">octette</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">23SUMMER RIBBED SWIMWEAR SET (2COLOR)</a></p>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">172,000</a></span>
+<span class="discount">154,000</span>
+<span class="sale">10%</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="box">
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/80/301683080.jpg?rs=233"alt=""></a>
+</div>
+
+<div class="text-wrap">
+
+<div class="title">
+<h5><a href="#">SOGNARE BY</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">쉐이프 원피스 수영복 블랙</a></p><br>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">74,800</a></span>
+<span class="discount">80,000</span>
+<span class="sale">15%</span><br>
+<span class="cupon">쿠폰</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="box">
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/38/302527938_RX46064.jpg?rs=233"alt=""></a>
+</div>
+
+<div class="text-wrap">
+
+<div class="title">
+<h5><a href="#">MOODNIGHT</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">ADA Fisherman slide slipper flat sandals - 4colors</a></p>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">108,800</a></span>
+<span class="discount">120,000</span>
+<span class="sale">10%</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="box">
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/55/302837555_CK47734.jpg?rs=233"alt=""></a>
+</div>
+
+<div class="text-wrap">
+
+<div class="title">
+<h5><a href="#">LOEUVRE</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">[단독] Top-Stitched Half Sleeve Jacket SW3MJ210-96</a></p>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">161,100</a></span>
+<span class="discount">179,000</span>
+<span class="sale">10%</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="box">
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/55/302188355_GE40443.jpg?rs=233"alt=""></a>
+</div>
+
+<div class="text-wrap">
+
+<div class="title">
+<h5><a href="#">LEMEME</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">[단독]Sac Petit Nouvelle_5colors</a></p><br>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">278,000</a></span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="box">
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/15/302726715_OJ13830.jpg?rs=233"alt=""></a>
+</div>
+
+<div class="text-wrap">
+
+<div class="title">
+<h5><a href="#">AND YOU</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">PISA Sleeveless mini one piece (Green tartan check)</a></p>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">158,400</a></span>
+<span class="discount">190,000</span>
+<span class="sale">10%</span><br>
+<span class="cupon">쿠폰</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<section id="exclusive">
+<h1>EXCLUSIVE</h1>
+
+<div class="box-wrap">
+
+<div class="box">
+<div class="img-wrap">
+<a href="#"><img src="https://image.wconcept.co.kr/images/builder/1/4/15/282/3.Current_20230728152042.jpg?RS=900"alt=""></a>
+</div>
+
+</div>
+
+<div class="box">
+<div class="img-wrap">
+<a href="#"><img src="https://image.wconcept.co.kr/images/builder/1/4/15/282/3.STYLE%20FOCUS%20-%20LEMEME_20230726152713.jpg?RS=900"alt=""></a>
+</div>
+
+</div>
+
+<div class="box">
+<div class="img-wrap">
+<a href="#"><img src="https://image.wconcept.co.kr/images/builder/1/4/15/282/5.FABRICOLOGY_20230727165804.jpg?RS=900"alt=""></a>
+</div>
+
+</div>
+
+
+</section>
+
+<section id="exclusive2">
+
+<div class="box-wrap">
+<div class="box">
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/16/303230416_WH91857.jpg?RS=216"alt=""></a>
+</div>
+
+<div class="text-wrap">
+
+<div class="title">
+<h5><a href="#">FRITUR</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">The NEEDLE Shirt White_F232ST01</a></p>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">198,000</a></span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="box">
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/07/302862907_XL77739.jpg?RS=216"alt=""></a>
+</div>
+
+<div class="text-wrap">
+
+<div class="title">
+<h5><a href="#">BAU by Bride And You</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">LAINIE Shirring detailed flared long dress (Black)</a></p>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">278,000</a></span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="box">
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/56/301709256.jpg?RS=216"alt=""></a>
+</div>
+
+<div class="text-wrap">
+
+  <div class="title">
+<h5><a href="#">MOHAN</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">TWR STITCH BUTTON SKIRT_ 2 COLORS</a></p>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">83,300</a></span>
+<span class="discount">90,000</span>
+<span class="sale">15%</span><br>
+<span class="cupon">쿠폰</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="box">
+  <div class="img-wrap">
+  <a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/25/302861625_QN74089.jpg?RS=216"alt=""></a>
+  </div>
+  
+  <div class="text-wrap">
+  
+    <div class="title">
+  <h5><a href="#">ORE</a></h5>
+  </div>
+  
+  <div class="line">
+  <p><a href="#">(8th) Signature Mid-Length PT_Black</a></p>
+  </div>
+  
+  <div class="price">
+  <span class="base-price"><a href="#">97,470</a></span>
+  <span class="discount">100,000</span>
+  <span class="sale"></span>
+  </div>
+  
+  </div>
+  
+  </div>
+
+  
+  <div class="box">
+    <div class="img-wrap">
+    <a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/60/301309660_PQ20550.jpg?RS=216"alt=""></a>
+    </div>
+    
+    <div class="text-wrap">
+    
+      <div class="title">
+    <h5><a href="#">P/A by PAUL & ALICE</a></h5>
+    </div>
+    
+    <div class="line">
+    <p><a href="#">CHECK LONG DRESS_5COLORS</a></p>
+    </div>
+    
+    <div class="price">
+    <span class="base-price"><a href="#">80,750</a></span>
+    <span class="discount">95,000</span>
+    <span class="sale">15%</span>
+    </div>
+    
+    </div>
+    
+    </div>
+
+    
+    <div class="box">
+      <div class="img-wrap">
+      <a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/60/302537760_BC32957.jpg?RS=216"alt=""></a>
+      </div>
+      
+      <div class="text-wrap">
+      
+        <div class="title">
+      <h5><a href="#">LE17SEPTEMBRE</a></h5>
+      </div>
+      
+      <div class="line">
+      <p><a href="#">SLEEVELESS RIBBED KNIT CROP TOP[NAVY]</a></p>
+      </div>
+      
+      <div class="price">
+      <span class="base-price"><a href="#">111,200</a></span>
+      <span class="discount">139,000</span>
+      <span class="sale">20%</span>
+      </div>
+      
+      </div>
+      
+      </div>
+  
+
+
+</div>
+
+</section>
+
+<section id="beauty">
+<h1>BEAUTY PICK</h1>
+
+<div class="box-wrap">
+<div class="imgbox">
+<a href=""><img src="https://image.wconcept.co.kr/images/builder/1/4/15/310/%EC%83%88%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20(53)_20230724141702.jpg" alt=""></a>
+</div>
+
+<div class="prodect">
+<div class="list">
+<div class="box">
+
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/01/303158901_XX12790.jpg?RS=216"alt=""></a>
+</div>
+
+
+<div class="text-wrap">
+
+  <div class="title">
+<h5><a href="#">shimoment</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">[교체형] 브이 리프팅 롤러크림 120ml</a></p>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">24,500</a></span>
+<span class="discount">35,000</span>
+<span class="sale">30%</span>
+</div>
+
+</div>
+
+</div>
+<div class="box">
+
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/52/303104352_GJ11379.jpg?RS=216"></a>
+</div>
+
+
+<div class="text-wrap">
+
+  <div class="title">
+<h5><a href="#">hersteller</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">원더 베지 릴리프 선크림 SPF50+ PA++++ 50ml</a></p>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">17,550</a></span>
+<span class="discount">26,000</span>
+<span class="sale">33%</span>
+</div>
+
+</div>
+
+</div>
+<div class="box">
+
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/51/302305051_YV57439.jpg?RS=216"></a>
+</div>
+
+
+<div class="text-wrap">
+
+  <div class="title">
+<h5><a href="#">arwe</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">스트레스 릴렉서 롤온 오일 8ml</a></p><br>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">11,000</a></span>
+<span class="discount">13,000</span>
+<span class="sale"></span>
+</div>
+
+</div>
+
+</div>
+<div class="box">
+
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/80/303141280_IG12332.jpg?RS=216"></a>
+</div>
+
+
+<div class="text-wrap">
+
+  <div class="title">
+<h5><a href="#">rom&nd</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">[1+1] 립 메이트 펜슬</a></p><br>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">17,820</a></span>
+<span class="discount">26,000</span>
+<span class="sale">31%</span>
+</div>
+
+</div>
+
+
+</div>
+<div class="box">
+
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/96/302685696.jpg?RS=216"></a>
+</div>
+
+
+<div class="text-wrap">
+
+  <div class="title">
+<h5><a href="#">3CE</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">미니 메이크업 브러쉬 키트</a></p><br>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">49,770</a></span>
+<span class="discount">79,000</span>
+<span class="sale">20%</span>
+</div>
+
+</div>
+
+
+</div>
+</div>
+<div class="list">
+
+<div class="box">
+
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/41/301228441_IF96483.jpg?RS=216"></a>
+</div>
+
+
+<div class="text-wrap">
+
+  <div class="title">
+<h5><a href="#">CHAHONG</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">[뷰티특가]<br>볼륨 컬러</a></p>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">158,400</a></span>
+<span class="discount">17,000</span>
+<span class="sale">10%</span>
+</div>
+
+</div>
+
+</div>
+<div class="box">
+
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/33/302169133.jpg?RS=216"></a>
+</div>
+
+
+<div class="text-wrap">
+
+  <div class="title">
+<h5><a href="#">BALANCE</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">[뷰티특가]<br>시그니처 세트</a></p>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">118,800</a></span>
+<span class="discount">13,2000</span>
+<span class="sale">10%</span>
+</div>
+
+</div>
+
+</div>
+<div class="box">
+
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/59/301324659.jpg?RS=216"></a>
+</div>
+
+
+<div class="text-wrap">
+
+  <div class="title">
+<h5><a href="#">la Pitta</a>></h5>
+</div>
+
+<div class="line">
+<p><a href="#">[뷰티특가]글라이딩 오토샷 IPL 레이저 제모기 JOL-500K</a></p>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">109,000</a></span>
+<span class="discount">258,000</span>
+<span class="sale">10%</span>
+</div>
+
+</div>
+
+</div>
+<div class="box">
+
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/48/302188348.jpg?RS=216"></a>
+</div>
+
+
+<div class="text-wrap">
+
+  <div class="title">
+<h5><a href="#">mama non mama</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">[뷰티특가]리턴투20 콜라겐 15000 2박스</a></p>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#"></a></span>
+<span class="discount">92,000</span>
+<span class="sale">6%</span>
+</div>
+
+</div>
+
+
+</div>
+<div class="box">
+
+<div class="img-wrap">
+<a href="#"><img src="https://product-image.wconcept.co.kr/productimg/image/img1/13/302701313_RR64487.jpg?RS=216"></a>
+</div>
+
+
+<div class="text-wrap">
+
+  <div class="title">
+<h5><a href="#">One-day`s You</a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">[뷰티특가]리얼 콜라겐 앰플 세럼10ml (1개입)</a></p>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#">8,910</a></span>
+<span class="discount">16,000</span>
+<span class="sale">44%</span><br>
+<span class="cupon">쿠폰</span>
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+
+
+
+</section>
+<section id="tv">
+
+<div class="box-wrap">
+
+<div class="box">
+
+
+<div class="img-wrap">
+
+<div class="imgbox">
+
+<a href="#"><img src="https://image.wconcept.co.kr/images/builder/1/4/15/31/PC%EC%97%90%EB%94%94%EC%85%98%20%EA%B5%AC%EC%A2%8C%20%EC%8D%B8%EB%84%A4%EC%9D%BC_20220921221521.jpg?resize=295x295"alt=""></a>
+</div>
+
+<div class="text-wrap">
+
+<div class="title">
+<h5><a href="#"><strong>GLOBAL CAMPAIGN with OLIVIA</strong></a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">
+글로벌 인플루언서 올리비아와 함께한 런던
+</a></p>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#"></a></span>
+<span class="discount"></span>
+<span class="sale"></span>
+
+
+</div>
+
+</div>
+
+</div>
+<div class="img-wrap">
+
+<div class="imgbox">
+
+<a href="#"><img src="https://image.wconcept.co.kr/images/builder/1/4/15/31/%EC%97%90%EB%94%94%EC%85%98%EA%B5%AC%EC%A2%8C_%EC%8F%A0_20220620112703.jpg?resize=295x295"alt=""></a>
+</div>
+
+<div class="text-wrap">
+
+<div class="title">
+<h5><a href="#"><strong>HI SEOUL SHOWROOM</strong></a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">SOLE's WONDERLAND</a></p>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#"></a></span>
+<span class="discount"></span>
+<span class="sale"></span>
+
+
+</div>
+
+</div>
+
+</div>
+<div class="img-wrap">
+
+<div class="imgbox">
+
+<a href="#"><img src="https://image.wconcept.co.kr/images/builder/1/4/15/31/%EC%97%90%EB%94%94%EC%85%98%EA%B5%AC%EC%A2%8C_%EC%9E%89%ED%81%AC_20220620114508.jpg?resize=295x295"alt=""></a>
+</div>
+
+<div class="text-wrap">
+
+<div class="title">
+<h5><a href="#"><strong>EENK GLOBAL CAMPAIGN</strong></a></h5>
+</div>
+
+<div class="line">
+<p><a href="#"> 잉크와 함께한 리앤드라 메딘의 유토피아</a></p>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#"></a></span>
+<span class="discount"></span>
+<span class="sale"></span>
+
+
+</div>
+
+</div>
+
+</div>
+<div class="img-wrap">
+
+<div class="imgbox">
+
+<a href="#"><img src="https://image.wconcept.co.kr/images/builder/1/4/15/31/banner_resize_txt_20210716114949.jpg?resize=295x295"alt=""></a>
+</div>
+
+<div class="text-wrap">
+
+<div class="title">
+<h5><a href="#"></a><strong>HI SEOULSHOWROOM</strong>></a></h5>
+</div>
+
+<div class="line">
+<p><a href="#">유라X하이서울쇼룸 드림라이브 </a></p>
+</div>
+
+<div class="price">
+<span class="base-price"><a href="#"></a></span>
+<span class="discount"></span>
+<span class="sale"></span>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+</div>
+
+
+</section>
+
+<section id="crocx">
+
+<div class="img-wrap">
+
+
+<a href=""><img src="https://image.wconcept.co.kr/images/disp_issue/T230705162129_KF3.jpg" alt=""></a>
+</div>
+</section>
+
+
+
+
+<section id="WDNA">
+
+<div class="head-wrap">
+
+<h1>WDNA</h1>
+<nav calss="two">
+<ul>
+<li>ALL</li>
+<li>WOMEN</li>
+<li>MEN</li>
+<li>LIFE</li>
+<li>BEAUTY</li>
+</ul>
+
+</nav>
+</div>
+
+
+<div class="product">
+
+<div class="img-wrap">
+
+<a hreg=""><img src="https://image.wconcept.co.kr/images/upload/wdna/RP230731100609_Z8EN.jpg?RS=300" alt=""></a>
+
+</div>
+
+<div class="img-wrap">
+
+<a hreg=""><img src="https://image.wconcept.co.kr/images/upload/wdna/RP230730041116_7WYA.jpeg?RS=300" alt=""></a>
+
+</div>
+
+<div class="img-wrap">
+
+<a hreg=""><img src="https://image.wconcept.co.kr/images/upload/wdna/RP230729142841_HDQI.jpeg?RS=300" alt=""></a>
+
+</div>
+
+<div class="img-wrap">
+
+<a hreg=""><img src="https://image.wconcept.co.kr/images/upload/wdna/RP230728174705_I7S2.jpg?RS=300" alt=""></a>
+
+</div>
+
+<div class="img-wrap">
+
+<a hreg=""><img src="https://image.wconcept.co.kr/images/upload/wdna/RP230728174559_4VTD.jpg?RS=300" alt=""></a>
+
+</div>
+
+<div class="img-wrap">
+
+<a hreg=""><img src="https://image.wconcept.co.kr/images/upload/wdna/RP230728174559_4VTD.jpg?RS=300" alt=""></a>
+
+</div>
+
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+  
+
+ <nav class="foot">
+
+  <div class="nav">
+   
+  
+     
+        
+        
+      
+          
+    <ul>
+      <li>회사소개</li>
+      <li>입점상담</li>
+      <li>이용약관</li>
+      <li>개인정보처리방침</li>
+      <li>고객센터</li>
+     <li>채용정보</li>
+      <li>GLOBAL</li>
+        </ul>
+      </div>
+     
+  
+    
+  
+  
+  </nav>
+  
+
+
+
+
+<footer>
+
+  
+
+    <div class="text">
+  
+    상호명 : ㈜더블유컨셉코리아 ㅣ 대표자 : 이은철 ㅣ 주소 : 서울특별시 강남구 테헤란로 231, EAST동 20층(역삼동, 센터필드)<br>
+    사업자등록번호 : 211-88-19183 ㅣ 통신판매업신고 : 제2009호-서울강남-00847호 
+    <a href="" class="micro_btn"  target="_blank">사업자정보확인</a>
+    │ 개인정보보호책임자 : 허선희 │ 호스팅서비스 : ㈜ 더블유컨셉코리아 <br>
+
+				COPYRIGHT ⓒ ㈜더블유컨셉코리아 ALL RIGHTS RESERVED
+        </div>
+			
+  
+  <div class="right">
+
+
+<h1>소비자피해보상보험</h1>
+<p>
+  고객님은 안전거래를 위해 현금 결제 시, Wconcept 에서 가입한
+  <br>
+
+  소비자피해보상보험 서비스를 이용하실 수 있습니다.</p>
+ <span> 보상대상 : 미배송/반품, 환불거부/쇼핑몰부도 </span>
+ <a>서비스 가입사실 확인</a>
+</div>
+  
+</footer>
+</body>
+</html>
+
+
